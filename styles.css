@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.initial-balance-container, .expenses-container, .current-balance-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+}
+.initial-balance {
+    margin-bottom: 20px;
+    color: rgb(4, 155, 4);
+    font-size: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+.expenses {
+    color: rgb(150, 14, 14);
+    font-size: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+.current-balance {
+    color: rgb(4, 155, 4);
+    font-size: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-income-container, .input-expenses-container {
+    margin: 25px 50px 0px 50px;
+    border: 1px solid black;
+}
+.container-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0px 0px 0px;
+}
+.form-control, .btn {
+}
+
+.edit-item, .delete-item {
+    font-size: 17px;
+    background: none;
+    border: none;
+}
+.edit-item { color: rgb(102, 102, 245); }
+.delete-item { color: red; }
+.edit-item:hover { -webkit-transform: scale(1.1); }
+.delete-item:hover { -webkit-transform: scale(1.1);}
