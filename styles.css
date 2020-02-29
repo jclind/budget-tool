@@ -37,9 +37,6 @@ body {
     font-weight: 500;
     margin: 10px 0px 0px 0px;
 }
-.form-control, .btn {
-}
-
 .edit-item, .delete-item {
     font-size: 17px;
     background: none;

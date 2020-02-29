@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Tool</title>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
@@ -14,15 +16,15 @@
         <div class="row justify-content-md-center">
             <div class="initial-balance-container col-3">
                 <div class="container-title">Initial Balance</div>
-                <div class="initial-balance">$7000</div>
+                <div class="initial-balance" id="initial-balance">$7000</div>
             </div>
             <div class="expenses-container col-3">
                 <div class="container-title">Expenses</div>
-                <div class="expenses">$7000</div>
+                <div class="expenses" id="expenses">$7000</div>
             </div>
             <div class="current-balance-container col-3">
                 <div class="container-title">Current Balance</div>
-                <div class="current-balance">$7000</div>
+                <div class="current-balance" id="current-balance">$7000</div>
             </div>
         </div>
     </div>
@@ -33,16 +35,13 @@
                 <div class="input-group mb-3">
                     <label style="float: left; clear: left; width: 100%; margin-top: 15px;">Enter Title:</label>
                     <input type="text" id="input-income-title" class="form-control" placeholder="Title" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button">Add</button>
-                    </div>
                 </div>
                 <div class="input-group mb-3">
                     <label style="float: left; clear: left; width: 100%; margin-top: 15px;">Enter Amount:</label>
                     <input type="text" id="input-income-amount" class="form-control" placeholder="Amount" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button">Add</button>
-                    </div>
+                </div>
+                <div class="text-center" style="margin: 15px 0px;" id="income-button">
+                    <button type="button" class="btn btn-outline-success">Enter</button>
                 </div>
             </div>
             <div class="input-expenses-container col" style="border: 2px solid rgb(150, 14, 14);">
@@ -50,21 +49,18 @@
                 <div class="input-group mb-3">
                     <label style="float: left; clear: left; width: 100%; margin-top: 15px;">Enter Title:</label>
                     <input type="text" class="form-control" id="input-expenses-title" placeholder="Title" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button">Add</button>
-                    </div>
                 </div>
                 <div class="input-group mb-3">
                     <label style="float: left; clear: left; width: 100%; margin-top: 15px;">Enter Amount:</label>
                     <input type="text" class="form-control" id="input-expenses-amount" placeholder="Amount" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button">Add</button>
-                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-danger" id="expenses-button">Enter</button>
                 </div>
             </div>
         </div>
     </div>
-    <table class="table w-50" align="center" style="margin-top: 50px;">
+    <table class="table w-50" align="center" style="margin-top: 50px;" id="table">
         <thead>
           <tr>
             <th style="width: 40%;">Title</th>
@@ -73,7 +69,7 @@
             <th style="width: 2%;"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="table-body">
             <tr>
                 <td>Car bill</td>
                 <td>Car bill</td>
