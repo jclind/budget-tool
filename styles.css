@@ -46,3 +46,16 @@ body {
 .delete-item { color: red; }
 .edit-item:hover { -webkit-transform: scale(1.1); }
 .delete-item:hover { -webkit-transform: scale(1.1);}
+
+.clear-button {
+    border: none;
+    border-radius: 2px;
+    background: #a2b8ff;
+    margin: 0;
+    padding: 2px 0px;
+    font-size: 11px;
+    width: 60px;
+}
+.clear-button:hover {
+    background: rgb(203, 215, 255); 
+}
