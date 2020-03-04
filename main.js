@@ -171,6 +171,33 @@ createList();
 updateBalance();
 changeColor();
 
+// Allow enter key to input data
+document.getElementById('input-income-title').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('income-button').click();
+    }
+})
+document.getElementById('input-income-amount').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('income-button').click();
+    }
+})
+
+document.getElementById('input-expenses-title').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('expenses-button').click();
+    }
+})
+document.getElementById('input-expenses-amount').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('expenses-button').click();
+    }
+})
+
 document.getElementById('income-button').addEventListener('click', add);
 document.getElementById('expenses-button').addEventListener('click', subtract);
 document.getElementById('clear-button').addEventListener('click', clearAll);
